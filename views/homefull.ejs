@@ -1,0 +1,252 @@
+<%- include('layouts/head.html') %>
+    <body>
+        <%- include('layouts/nav.html', {type: 'home'}) %>
+        <%- include('layouts/nav-hotel.html') %>
+        <div class="container-fluid wrap-container">
+            <form action="">
+                <div class="tab">
+                    <div class="step--list-hotels">
+                        <h2 class="title-section hotel">Select your hotel</h2>
+                        <div class="step--list-hotels--container step--container">
+                            <div class="step--list-hotels--item" data-hotel="The Pyramid at Grand Cancun">
+                                <img src="img/hoteles/pyr.png" alt="The Pyramid at Grand Cancun Hotel" title="The Pyramid at Grand Cancun Hotel">
+                            </div>
+                            <div class="step--list-hotels--item" data-hotel="Grand Oasis Cancun">
+                                <img src="img/hoteles/goc.png" alt="Grand Oasis Cancun Hotel" title="Grand Oasis Cancun Hotel">
+                            </div>
+                            <div class="step--list-hotels--item" data-hotel="Grand Oasis Palm">
+                                <img src="img/hoteles/gop.png" alt="Grand Oasis Palm Hotel" title="Grand Oasis Palm Hotel">
+                            </div>
+                            <div class="step--list-hotels--item" data-hotel="Oasis Palm">
+                                <img src="img/hoteles/op.png" alt="Oasis Palm Hotel" title="Oasis Palm Hotel">
+                            </div>
+                            <div class="step--list-hotels--item" data-hotel="The Sian Ka'an at Sens Cancun">
+                                <img src="img/hoteles/tsks.png" alt="The Sian Ka'an at Sens Cancun Hotel" title="The Sian Ka'an at Sens Cancun Hotel">
+                            </div>
+                            <div class="step--list-hotels--item" data-hotel="Grand Sens Cancun">
+                                <img src="img/hoteles/gsc.png" alt="Grand Sens Cancun Hotel" title="Grand Sens Cancun Hotel">
+                            </div>
+                            <div class="step--list-hotels--item" data-hotel="Oh! Cancun The Urban Oasis">
+                                <img src="img/hoteles/oh.png" alt="Oh! Cancun The Urban Oasis Hotel" title="Oh! Cancun The Urban Oasis Hotel">
+                            </div>
+                            <div class="step--list-hotels--item" data-hotel="Smart Cancun by Oasis">
+                                <img src="img/hoteles/smart.png" alt="Smart Cancun by Oasis Hotel" title="Smart Cancun by Oasis Hotel">
+                            </div>
+                        </div>
+                        <div class="step--list-hotels--selected">
+                            <input name="hotelName" type="hidden" value="">
+                            <span class="selected-hotel">Select: <span id="valuehotelName"></span></span>
+                        </div>
+                        <div class="step--buttons text-center">
+                            <button class="btn btn--blue nextBtn" data-tab="1">continue</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="step--enter-data section--page step--container first-step">
+                        <h2 class="title-section user">Enter your data</h2>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="agency">Agency Confirmation Number</label>
+                            <input type="number" name="agency">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name">
+                        </div>
+                        <div class="step--buttons text-center">
+                            <button class="btn btn--blue nextBtn" data-tab="1">Continue</button> 
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="step--enter-data section--page step--container second-step">
+                        <h2 class="title-section user">Enter your data</h2>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="agency">PID</label>
+                            <input type="number" name="agency">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name">
+                        </div>
+                        <div class="block--info col-xs-12">
+                            <p class="block--info-text">Please click on the blue icon next  to the guest you wish to register to add the passport.</p>
+                            <div class="block--info-table">
+                                <table id="table-file">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Last Name</th>
+                                            <th class="center">File</th>
+                                            <th class="center">Done</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Carlos</td>
+                                            <td>Salgado</td>
+                                            <td class="center">
+                                                <button class="btn btn--circle btn--circle-blue btn--circle-pin nextBtn" data-tab="1"></button>
+                                            </td>
+                                            <td class="center"><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fernando</td>
+                                            <td>Pereira</td>
+                                            <td class="center"><a" class="btn btn--circle btn--circle-blue btn--circle-pin" data-tab=1></a></td>
+                                            <td class="center"><input type="checkbox"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- <a href="/enter-data-2" class="btn btn--red cross">Close</a>        -->
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="step--enter-data guest-img">
+                        <div class="section--page step--container">
+                            <h2 class="title-section user">Guest</h2>
+                            <div class="load-image col-xs-12">
+                                <div class="load-image--container">
+                                    <span class="tx">add your <br>passport image</span>
+                                    <img id="myImg2" src="#" alt="your image" height=200 width=100>
+                                </div>
+                                <!-- MODAL -->
+                                <div id="modalLoadImg" class="modal">
+                                    <div class="modal-content">
+                                        <span class="close">Select an Image</span>
+                                        <div class="modal--container">
+                                            <div class=" button camera">
+                                                <div class="button--cont">
+                                                    <span class="icon icon-camera"></span>
+                                                    <span>Camera</span>
+                                                </div>
+                                            </div>
+                                            <div class="button explorar upload">
+                                                <div class="button--cont">
+                                                    <span class="icon icon-picture"></span>
+                                                    <span>Explorar</span>
+                                                    <input type='file' id="fileUpload" class="inputfile" />
+                                                </div>
+                                            </div>
+                                            <div class="image">
+                                                <img id="myImg" src="#" alt="your image" height=200 width=100>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="name">Name</label>
+                                <input type="text" name="name">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="last-name">
+                            </div>
+                            <div class="block--info col-xs-12">
+                                <h2 class="title-section flag">Hotel Rules</h2>
+                                <p class="block--info-text">To submit and complete your pre-check in process, 
+                                    please check the checkbox below.</p>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="condiciones-de-uso">
+                                    <p class="block--info-text"> I have read and accept the <span class="blue">hotel policies</p>.
+                                </div>
+                            </div>
+                            <div class="step--buttons text-center">
+                                <button disabled type="button" class="btn btn--blue nextBtn submit" data-tab="1">Continue</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab">
+                    <div class="step--enter-data guest-data">
+                        <div class="section--page step--container">
+                            <h2 class="title-section user">Guest</h2>
+                            <div class="load-image col-xs-12">
+                                <div class="load-image--container">
+                                    <img id="myImg3" src="#" alt="your image" height=200 width=100>
+                                </div>
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="name">Name</label>
+                                <input type="text" name="name">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="last-name">
+                            </div>
+                            <!-- BOOKING -->
+                            <h2 class="title-section booking">Booking</h2>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="email">Email</label>
+                                <input type="email" name="email">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="pid">PID</label>
+                                <input type="text" name="pid">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="event">Event</label>
+                                <input type="text" name="event">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="checkin">Check in</label>
+                                <input type="date" name="checkin">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="checkout">Check out</label>
+                                <input type="date" name="checkout">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="room">Room</label>
+                                <input type="number" name="room">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="adults">Adults</label>
+                                <input type="number" name="adults">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="junior">Junior</label>
+                                <input type="number" name="junior">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="kids">Kids</label>
+                                <input type="number" name="kids">
+                            </div>
+                            <div class="input-group col-xs-12 col-sm-6">
+                                <label for="babies">Babies</label>
+                                <input type="number" name="babies">
+                            </div>
+                            <!-- HELP -->
+                            <h2 class="title-section help">Help</h2>
+                            <p class="block--info-text">If you have questions or comments about your reservationo dates, please type in the box below and hit send.</p>
+                            <div class="input-group col-xs-12">
+                                <label for="message">Name</label>
+                                <textarea  type="number" name="message" rows="5"></textarea>
+                            </div>
+                            <div class="step--buttons right">
+                                <button type="button" class="btn btn--blue btn--small arrow pretendSend">Send</button> 
+                            </div>
+                            <!-- SECTION -->
+                            <div class="block--info col-xs-12">
+                                <h2 class="title-section flag">Hotel Rules</h2>
+                                <p class="block--info-text">To submit and complete your pre-check in process, 
+                                    please check the checkbox below.</p>
+                                <div class="checkbox">
+                                    <input type="checkbox" class="condiciones-de-uso">
+                                    <p class="block--info-text"> I have read and accept the <span class="blue">hotel policies</p>.
+                                </div>
+                            </div>
+                            <div class="step--buttons text-center">
+                                <button disabled type="button" class="btn btn--blue nextBtn submit" data-tab="-2">Continue</button> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <%- include('layouts/footer.html') %>
+        <%- include('layouts/end.html') %>

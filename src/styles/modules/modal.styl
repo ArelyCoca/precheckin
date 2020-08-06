@@ -1,0 +1,89 @@
+.modal
+    display none
+    position fixed
+    z-index 1
+    left 0
+    top 0
+    width 100%
+    height 100%
+    overflow hidden
+    background-color: rgb(0,0,0)
+    background-color: rgba(0,0,0,0.4)
+    padding-top 25%
+    &-content
+        background #F6F6F6
+        margin: auto
+        padding: 20px
+        border: 1px solid #888
+        max-width: 250px
+        border-radius: 5px
+        .close
+            font-size: 14px
+            line-height: 16px
+            font-weight: 600
+            text-align: right 
+            width 100%
+            display block
+            position relative
+            padding-bottom 20px
+            &:before
+                content 'm'
+                font-family: $precheckin
+                font-size: 14px
+                line-height: 14px
+                position absolute
+                left 0
+
+    &--container
+        display flex
+        flex-flow row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+        .button
+            flex-basis calc(50% - 6px)
+            max-width: calc(50% - 6px)
+            background rgba($gray-44, .5)
+            border-radius: 5px
+            color white
+            height 100px
+            position relative
+            cursor pointer
+            margin 0 6px
+            &:nth-child(1)
+                margin-left: 0
+            &:nth-child(2)
+                margin-right: 0
+            &--cont
+                width 100%
+                height 100%
+                position absolute
+                left 50%
+                top 50%
+                transform: translate(-50%, -50%)
+            span
+                padding-top: 10px
+                font-size: 14px
+                line-height: 16px
+                font-weight: 300
+                display block
+                text-align: center
+                &.icon
+                    padding-top: 20px
+                    &:before
+                        font-size: 35px
+        .image
+            flex-basis: 100%
+            max-width: 100%
+            width 100%
+            border-radius: 5px
+            height 100px
+            margin-top 13px
+            background rgba($gray-44, .5)
+            
+            img
+                height 100%
+                width: 100%
+                object-fit: cover
+                display block
+                flex-shrink: 0

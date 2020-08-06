@@ -1,0 +1,65 @@
+<%- include('layouts/head.html') %>
+    <body>
+        <%- include('layouts/nav.html', {type: 'intern'}) %>
+        <%- include('layouts/nav-hotel.html') %>
+        <div class="enter-data guest-img">
+            <div class="section--page container-fluid wrap-container">
+                <div class="enter-data--container">
+                    <h2 class="title-section user">Guest</h2>
+                    <form action="">
+                        <div class="load-image col-xs-12">
+                            <div class="load-image--container">
+                                <span class="tx">add your <br>passport image</span>
+                                <img id="myImg2" src="#" alt="your image" height=200 width=100>
+                            </div>
+                            <!-- The Modal -->
+                            <div id="modalLoadImg" class="modal">
+                                <div class="modal-content">
+                                    <span class="close">Select an Image</span>
+                                    <div class="modal--container">
+                                        <div class=" button camera">
+                                            <div class="button--cont">
+                                                <span class="icon icon-camera"></span>
+                                                <span>Camera</span>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="button explorar upload">
+                                            <div class="button--cont">
+                                                <span class="icon icon-picture"></span>
+                                                <span>Explorar</span>
+                                                <input type='file' id="fileUpload" class="inputfile" />
+                                            </div>
+                                           
+
+                                        </div>
+                                        <div class="image">
+                                            <img id="myImg" src="#" alt="your image" height=200 width=100>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name">
+                        </div>
+                        
+                        <div class="block--info col-xs-12">
+                            <h2 class="title-section flag">Hotel Rules</h2>
+                            <p class="block--info-text">To submit and complete your pre-check in process, 
+                                please check the checkbox below.</p>
+                            <div class="checkbox "><input type="checkbox">I have read and accept the <span class="blue">hotel policies</span>.</div>
+                        </div>
+                        <a href="/guest-fill-data" class="btn btn--blue submit">Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('layouts/footer.html') %>
+        <%- include('layouts/end.html') %>

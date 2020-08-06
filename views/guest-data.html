@@ -1,0 +1,91 @@
+<%- include('layouts/head.html') %>
+    <body>
+        <%- include('layouts/nav.html', {type: 'intern'}) %>
+        <%- include('layouts/nav-hotel.html') %>
+        <div class="enter-data guest-data">
+            <div class="section--page container-fluid wrap-container">
+                <div class="enter-data--container">
+                    <h2 class="title-section user">Guest</h2>
+                    <form action="">
+                        <div class="load-image col-xs-12">
+                            <div class="load-image--container">
+                                <img src="" alt="">
+                                <!-- <a href="">
+                                    <span>add your <br>passport image</span>
+                                </a> -->
+                            </div>
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name">
+                        </div>
+                        <!-- SECTION -->
+                        <h2 class="title-section booking">Booking</h2>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="name">Name</label>
+                            <input type="number" name="name">
+                        </div>
+                        <!-- SECTION -->
+                        <h2 class="title-section help">Help</h2>
+                        <p class="block--info-text">If you have questions or comments about your reservationo dates, please type in the box below and hit send.</p>
+                        <div class="input-group col-xs-12">
+                            <label for="message">Name</label>
+                            <textarea  type="number" name="message" rows="5"></textarea>
+                        </div>
+                        <div class="button-right end-xs">
+                            <a href="" class="btn btn--blue btn--small arrow">send</a>
+                        </div>
+                        <!-- SECTION -->
+                        <div class="block--info col-xs-12">
+                            <h2 class="title-section flag">Hotel Rules</h2>
+                            <p class="block--info-text">To submit and complete your pre-check in process, 
+                                please check the checkbox below.</p>
+                            <div class="checkbox "><input type="checkbox">I have read and accept the <span class="blue">hotel policies</span>.</div>
+                        </div>
+                        <a href="/guest-fill-data" class="btn btn--blue submit">Submit</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('layouts/footer.html') %>
+        <%- include('layouts/end.html') %>

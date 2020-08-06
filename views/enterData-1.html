@@ -1,0 +1,26 @@
+<%- include('layouts/head.html') %>
+    <body>
+        <%- include('layouts/nav.html', {type: 'intern'}) %>
+        <%- include('layouts/nav-hotel.html') %>
+
+        <div class="enter-data first-step">
+            <div class="section--page container-fluid wrap-container">
+                <div class="enter-data--container">
+                    <h2 class="title-section user">Enter your data</h2>
+                    <form action="">
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="agency">Agency Confirmation Number</label>
+                            <input type="number" name="agency">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name">
+                        </div>
+                        <a href="/enter-data-2" class="btn btn--blue submit">Continue</a>
+                        <!-- <input type="submit" class="btn btn--blue" placeholder="Continue"> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('layouts/footer.html') %>
+        <%- include('layouts/end.html') %>

@@ -1,0 +1,67 @@
+.btn
+    height 36px
+    position relative
+    border:0px
+    line-height: 36px
+    padding: 0px 10px
+    cursor pointer
+    font-weight: 400
+    text-align: center
+    font-size: 14px
+    display: inline-block
+    transition: 0.2s all ease
+    border-radius: 4px
+    text-transform uppercase 
+    min-width: 200px
+    &--blue
+        background $blue-button
+        color white
+        &:hover
+            background lightness($blue-button, 70%)
+    &--red
+        background $red
+        color white
+        &:hover
+            background: lightness($red, 70%)
+    &--circle
+        border-radius: 100%
+        width 43px
+        height 43px
+        min-width: initial
+        padding 0
+        &-blue
+            background-color #033A83
+        &-pin
+            position relative
+            text-transform: none
+            &:before
+                content 'j'
+                font-family: $precheckin
+                color white
+                font-size: 24px
+                font-weight: 300
+                display block
+                position absolute
+                left 50%
+                top 50%
+                transform: translate(-50%, -50%)
+    &--small
+        min-width auto
+    &.cross
+        text-transform: none
+        &:before
+            content 'k'
+            font-family: $precheckin
+            display inline-block
+            padding-right 10px
+            font-size: 14px
+            vertical-align: top
+    &.arrow
+        text-transform: none
+        &:before
+            content 'd'
+            font-family: $precheckin
+            display inline-block
+            padding-right 10px
+            font-size: 14px
+            vertical-align: top

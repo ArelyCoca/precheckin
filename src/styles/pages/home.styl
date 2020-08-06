@@ -1,0 +1,86 @@
+.step
+    &--list-hotels
+        padding-top 15px
+        +from-width(5)
+            padding-top: 67px !important
+        &--item
+            flex-basis 100%
+            max-width: 400px
+            text-align: center
+            line-height: 0
+            margin 2px 0
+            cursor pointer
+            img
+                line-height: 0
+            &:hover
+                position relative
+                &:before
+                    content ''
+                    display block
+                    width 100%
+                    height 100%
+                    background rgba(black,.59)
+                    position absolute
+                    top 0 
+                    left 0
+                &:after
+                    content 'g'
+                    font-family: $precheckin
+                    font-size: 61px
+                    line-height: 61px
+                    color white
+                    font-weight: 500
+                    position absolute
+                    left 50%
+                    top 50%
+                    transform: translate(-50%, -50%)
+            +from-width(4)
+                flex-basis calc(50% - 10px)
+                max-width: calc(50% - 10px)
+                margin 0 10px 10px
+                &:nth-child(odd)
+                    margin-left 0
+                &:nth-child(even)
+                    margin-right: 0
+            +from-width(5)
+                flex-basis: 390px
+                max-width: 400px
+        
+        .selected-hotel
+            color $gray-44
+            padding 60px 0 10px
+            text-align: center
+            display block
+            +from-width(5)
+                text-align: left
+                padding 20px 0 30px
+    &--enter-data
+        &.guest-img
+        &.guest-data
+            h2
+                width 100%
+        span
+            &.blue
+                color $blue-button
+        .checkbox
+            .condiciones-de-uso
+                padding-right 5px
+                +from-width(5)
+                    padding-right: 10px
+            p
+                display inline
+    &--buttons
+        width 100%
+        text-align: center
+        padding 15px 0 50px
+        +from-width(5)
+            padding 50px 0 70px
+        &.right
+            text-align: right
+    &--container
+        display flex
+        flex-flow: row
+        flex-wrap: wrap
+        justify-content: center
+        align-items: center
+               

@@ -1,0 +1,54 @@
+<%- include('layouts/head.html') %>
+    <body>
+        <%- include('layouts/nav.html', {type: 'intern'}) %>
+        <%- include('layouts/nav-hotel.html') %>
+
+        <div class="enter-data second-step">
+            <div class="section--page container-fluid wrap-container">
+                <div class="enter-data--container">
+                    <h2 class="title-section user">Enter your data</h2>
+                    <form action="">
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="agency">PID</label>
+                            <input type="number" name="agency">
+                        </div>
+                        <div class="input-group col-xs-12 col-sm-6">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" name="last-name">
+                        </div>
+                        <div class="block--info col-xs-12">
+                            <p class="block--info-text">Please click on the blue icon next  to the guest you wish to register to add the passport.</p>
+                            <div class="block--info-table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Last Name</th>
+                                            <th class="center">File</th>
+                                            <th class="center">Done</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Carlos</td>
+                                            <td>Salgado</td>
+                                            <td class="center"><a href="/guest-load-img" class="btn btn--circle btn--circle-blue btn--circle-pin"></a></td>
+                                            <td class="center"><input type="checkbox"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fernando</td>
+                                            <td>Pereira</td>
+                                            <td class="center"><a href="/guest-load-img" class="btn btn--circle btn--circle-blue btn--circle-pin"></a></td>
+                                            <td class="center"><input type="checkbox"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <a href="/enter-data-2" class="btn btn--red cross">Close</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <%- include('layouts/footer.html') %>
+        <%- include('layouts/end.html') %>
